@@ -1,4 +1,3 @@
-require("./start-file");
 let app;
 if (process.env.NODE_ENV === "production") {
   app = require("./dist/important/app");

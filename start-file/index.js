@@ -1,5 +1,0 @@
-/* do stuff in the shell to start stuff 
-    establish mongo db connection
-    set up admin user
-    set up site title
-    and stuff then delete this and stuff */

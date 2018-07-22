@@ -1,6 +1,5 @@
 const express = require("express");
-const gzipStatic = require('express-static-gzip');
-const path = require("path")
+// const gzipStatic = require('express-static-gzip');
 /* start mongoose initialization */
 require("./AppStuff/mongoSetUp/mongoose")();
 /* end mongoose initialization */
