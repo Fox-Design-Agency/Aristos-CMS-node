@@ -38,7 +38,9 @@ gulp.task("nodemon", function(cb) {
   var started = false;
 
   return nodemon({
-    script: "index.js"
+    script: "index.js",
+    ext:"js ejs",
+    ignore:["debug.json", "error.json", "info.json"]
   }).on("start", function() {
     /* to avoid nodemon being started multiple times */
     /* thanks @matthisk */
