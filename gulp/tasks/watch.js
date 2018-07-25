@@ -4,7 +4,7 @@ const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 const nodemon = require("gulp-nodemon");
 
-gulp.task("watch", ["nodemon"], () => {
+gulp.task("watch", ["nodemon", "cssInject", "adminCssInject", "scriptsRefresh"], () => {
   browserSync.init(null, {
     proxy: "http://localhost:3000",
     port: 3001
@@ -65,4 +65,4 @@ gulp.task("adminCssInject", ["adminStyles"], () => {
     return gulp
       .src("./important/temp/styles/main.css")
       .pipe(browserSync.stream());
-  }); /* end of css inject task */
+}); /* end of css inject task */
