@@ -1,6 +1,6 @@
 # Aristos CMS - Node Version
 - **Finalizing the update stream**
-- **project will be production ready after rewrite**
+- **project will be mostly production ready after rewrite**
 
 This is the Node version for the Aristos Content Managment System (CMS).
 
@@ -11,6 +11,7 @@ You will can globally install the project and you will need yo if you do not hav
 npm install -g generator-aristos
 npm install -g yo
 ```
+
 When that is done, just make a folder, go into said folder and run the generator.
 You will be prompted for information so have this ready before starting the installer:
 - Project Name
@@ -20,16 +21,48 @@ You will be prompted for information so have this ready before starting the inst
 - admin username
 - admin password
 Once you have this information, then make whatever you want.
+
 ```
 mkdir <whatever you name your directory>
 cd <whatevevr you named your directory>
 yo aristos
 ```
 
+If you would like to also install an upgrade/plugin package, add the appropiate flag:
+```
+--blog
+--contact
+--data
+--documentation
+--newsletter
+--portfolio
+--products
+--management
+```
+
+an example of using a simple or multiple option flags are as shown:
+```
+yo aristos --blog
+yo aristos --products --blog
+```
+Each option flag needs a space after it, otherwise two options will be seen by the generator as a single option and not function correctly.
+
+The current state of the upgrade/plugin packages should also be noted:
+#### Upgrades
+    - blog: comments are not a thing right now, but should be
+    - contact: can recieve contact but not much else
+    - data: not a thing
+    - documentation: Mostly works
+    - newsletter: not a thing
+    - portfolio: Mostly works, editing images doesnt always work on first try
+    - products: Mostly works
+    - management: Needs complete rewrite
+#### Plugins
+    - printful: option flag not set, needs complete rewrite after product upgrade becomes finalized
+
 Soon, [Aristos Builder](https://aristosbuilder.com/) will be a great resource to help you get started. It's just pretty lame right now.
 
 For documentation, check out [Fox Design Agency](https://foxdesignagency.com/aristos/documentation)
-
 
 
 ## Changelog
