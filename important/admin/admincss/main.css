@@ -14,4 +14,5 @@
 @import "modules/_admin-section";
 @import "modules/_admin-table";
 @import "AristosTextEditor.css";
+@import "vendors/grapesjs";
 @import "modules/_alert";
