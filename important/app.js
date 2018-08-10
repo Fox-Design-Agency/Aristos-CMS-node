@@ -1,5 +1,4 @@
 const express = require("express");
-// const gzipStatic = require('express-static-gzip');
 /* start mongoose initialization */
 require("./AppStuff/mongoSetUp/mongoose")();
 /* end mongoose initialization */
@@ -9,9 +8,6 @@ const app = express();
 /* Start of app engine initialization */
 require("./AppStuff/engine/appEngine")(app);
 /* end of app engine initialization */
-/* Start of express sessions */
-require("./AppStuff/middlewares/session/expressSession")(app);
-/* end of express sessions */
 /* Start non routing middleware declaration */
 require("./AppStuff/middlewares/middlewares")(app);
 /* end of non routing middleware declaration */
