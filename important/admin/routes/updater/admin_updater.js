@@ -27,21 +27,22 @@ router.get("/", (req, res, next) => {
 router.get("/make-update/:update", (req, res, next) => {
   switch (req.params.update) {
     case "core":
-      require("../../../AristosStuff/AristosUpdater/aristosUpdater").coreUpdate();
+      require("../../../AristosStuff/AristosUpdater/aristosUpdater").coreUpdate(req);
       break;
     case "expansions":
       require("../../../AristosStuff/AristosUpdater/aristosUpdater")
-        .expansionUpdate();
+        .expansionUpdate(req);
       break;
     case "theme":
       require("../../../AristosStuff/AristosUpdater/aristosUpdater")
-        .themeUpdate();
+        .themeUpdate(req);
       break;
     default:
       break;
   }
-  res.redirect("back")
+  res.redirect("/admin/updater")
 });
 
 /* Exports */
 module.exports = router;
+
