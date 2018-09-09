@@ -8,6 +8,10 @@
     <meta name="keywords" content="<%= keywords %>">
     <meta name="author" content="<%= author %>">
 
+    <% if (typeof favicon !== "undefined"){ %>
+        <link rel="icon" href="<%= favicon %>">
+    <% } %>
+
     <title>Aristos CMS -
         <%= title %>
     </title>
